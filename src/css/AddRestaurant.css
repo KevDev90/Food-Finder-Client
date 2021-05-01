@@ -1,0 +1,68 @@
+.add-container {
+    margin-bottom: 1.5rem;   
+}
+
+form {
+    width: 100%;
+}
+
+.form-r {
+  display: flex;
+  justify-content: space-between;
+  /* margin-right: 1.5em; */
+  width: 100%;
+}
+
+.name {
+  /* margin-right: 40px; */
+  width: 100%;
+}
+
+.location {
+  /* margin-right: 40px; */
+  width: 100%;
+}
+
+.price {
+  /* margin-right: 40px; */
+  width: 100%;
+}
+
+.input{
+  /* width: 300px; */
+  height: 40px;
+  width: 95%;
+}
+.add-container form select {
+    height: 100% !important;
+}
+
+.add-btn {
+  background-color: #027CFF;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.body-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+form button {
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .input {
+        width: 90%;
+    }
+    .add-container form select {
+        height: 100% !important;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .input {
+        width: 85%;
+    }
+}

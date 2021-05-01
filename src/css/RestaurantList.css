@@ -1,0 +1,131 @@
+.list-group table {
+    width: 100%;
+}
+.list-group table th {
+    padding: 1.2rem 0.8rem;
+    color: #fff;
+    text-align: left;
+}
+.list-group table tbody td {
+    background-color: rgb(59, 56, 56);
+    color: #fff;
+    padding: 1rem .5rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+@media screen and (max-width: 690px ) {
+    list-group table {
+        min-width: 605px;
+        width: 100%;
+        overflow: scroll;
+    }
+}
+
+  /* Table Styles */
+  
+  .fl-table {
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: normal;
+    /* border-collapse: collapse; */
+    border: none;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .fl-table td,
+  .fl-table th {
+    text-align: left;
+    padding: 18px;
+    /* new */
+    box-sizing: border-box;
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+  
+  .fl-table td {
+    font-size: 16px;
+    border-bottom: 1px solid rgba(248, 247, 247, 0.144);
+    background-color: rgb(59, 56, 56);
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .fl-table thead th {
+    color: #ffffff;
+    background-color: #047DFF;
+  }
+  
+  @media screen and (min-width: 850px) {
+    .fl-table td {
+      padding: 0.7rem;
+    }
+  
+    .fl-table thead th {
+      padding: 0.7rem;
+    }
+  }
+  @media screen and (min-width: 1008px) {
+    .fl-table td {
+      padding: 1rem;
+    }
+  
+    .fl-table thead th {
+      padding: 1rem;
+    }
+  }
+  /* Responsive */
+  
+  @media (max-width: 767px) {
+    .fl-table {
+      display: block;
+      width: 100%;
+    }
+    .table-wrapper:before {
+      content: "Scroll horizontally >";
+      display: block;
+      text-align: right;
+      font-size: 11px;
+      color: white;
+      padding: 0 0 10px;
+    }
+    .fl-table th {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.322);
+    }
+    .fl-table thead,
+    .fl-table tbody,
+    .fl-table thead th {
+      display: block;
+    }
+    .fl-table thead th:last-child {
+      border-bottom: none;
+    }
+    .fl-table thead {
+      float: left;
+    }
+    .fl-table tbody {
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+    }
+    .fl-table td,
+    .fl-table th {
+      padding: 20px 0.625em 0.625em 0.625em im;
+      height: 60px;
+      vertical-align: middle;
+      box-sizing: border-box;
+      /* overflow-x: hidden; */
+      overflow-y: auto;
+      width: 120px;
+      font-size: 13px;
+      text-overflow: ellipsis;
+    }
+    .fl-table tbody tr {
+      display: table-cell;
+    }
+    .fl-table tbody td {
+      display: block;
+      text-align: center;
+    }
+  }

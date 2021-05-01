@@ -1,0 +1,23 @@
+.review-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 30px;
+}
+
+.review-grid .card {
+    background-color: #047DFF;
+    color: #fff;
+    width: 100%;
+    border-radius: 5px;
+}
+.review-grid .card .card-header span {
+    display: inline-block;
+    padding: 1rem;
+}
+.review-grid hr {
+    border-color: rgba(6, 7, 15, 0.171);
+}
+.review-grid .card-body p {
+    padding: .5rem .8rem;
+}

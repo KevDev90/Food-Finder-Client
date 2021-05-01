@@ -1,0 +1,41 @@
+.add-review form {
+    width: 100%;
+    margin-top: 30px;
+}
+.add-review .form-row {
+    display: flex;
+    justify-content: space-between;
+}
+.add-review label {
+    display: block;
+    font-size: 17px;
+    margin: 10px 0;
+}
+.add-review .form-group {
+    width: 30%;
+}
+.add-review .form-group.col-8 {
+    width: 65%;
+}
+.add-review  input, select#rating, textarea {
+    width: 100%;
+    height: 40px ;
+    border: 1px solid rgba(165, 156, 156, 0.747);
+    border-radius: 5px;
+}
+.add-review #rating {
+    height: 44px;
+}
+.add-review text {
+    display: block;
+    width: 100%;
+}
+.add-review button {
+    width: fit-content;
+    background-color: #047DFF;
+    border: 1px solid #047DFF;
+    padding: .8rem 1rem;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+}
