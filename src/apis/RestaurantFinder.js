@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "http://localhost:3001/api/v1/restaurants",
+  baseURL: "https://food-finder-client-jdvesnlvc-kevdev90.vercel.app/api/v1/restaurants",
 });
