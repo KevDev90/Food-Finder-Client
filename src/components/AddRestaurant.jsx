@@ -12,11 +12,13 @@ const AddRestaurant = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // console.log('postrequest')
       const response = await RestaurantFinder.post("/", {
         name,
         location,
         price_range: priceRange,
       });
+      console.log('dbpostqueryresults', response)
       console.log(response.data.data);
       addRestaurants(response.data.data.restaurant);
     } catch (err) {
