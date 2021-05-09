@@ -19,7 +19,10 @@ const RestaurantDetailPage = () => {
         const response = await RestaurantFinder.get(`/${id}`);
         console.log(response);
 
-        setSelectedRestaurant(response.data.data);
+        const totalReviewsGiven = response.data.data.reviews.map(({ rating }) => rating).reduce((acc, currentItem) => acc + currentItem, 0);
+        const average_rating = totalReviewsGiven / response.data.data.reviews.length;
+
+        setSelectedRestaurant({ ...response.data.data, average_rating });
       } catch (err) {
         console.log(err);
       }
@@ -32,13 +35,13 @@ const RestaurantDetailPage = () => {
       {selectedRestaurant && (
         <>
           <h1 className="text-center display-1">
-            {selectedRestaurant.restaurant.name}
+            {selectedRestaurant.name}
           </h1>
           <div className="star">
-            <StarRating rating={selectedRestaurant.restaurant.average_rating} />
+            <StarRating rating={selectedRestaurant.average_rating} />
             <span className="text-warning ml-1">
-              {selectedRestaurant.restaurant.count
-                ? `(${selectedRestaurant.restaurant.count})`
+              {selectedRestaurant.reviews
+                ? `(${selectedRestaurant.reviews.length})`
                 : "(0)"}
             </span>
           </div>

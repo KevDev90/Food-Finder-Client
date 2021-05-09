@@ -18,13 +18,14 @@ const AddReview = () => {
     e.preventDefault();
     try {
       const response = await RestaurantFinder.post(`/${id}/addReview`, {
+        restaurant_id: id,
         name,
         review: reviewText,
         rating,
       });
       history.push("/");
       history.push(location.pathname);
-    } catch (err) {}
+    } catch (err) { }
   };
   return (
     <div className="add-review">
