@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { RestaurantsContext } from "../context/RestaurantsContext";
 import RestaurantFinder from "../apis/RestaurantFinder";
 import StarRating from "../components/StarRating";
@@ -17,23 +17,31 @@ const RestaurantDetailPage = () => {
     const fetchData = async () => {
       try {
         const response = await RestaurantFinder.get(`/${id}`);
-        console.log(response);
-
         const totalReviewsGiven = response.data.data.reviews.map(({ rating }) => rating).reduce((acc, currentItem) => acc + currentItem, 0);
         const average_rating = totalReviewsGiven / response.data.data.reviews.length;
 
         setSelectedRestaurant({ ...response.data.data, average_rating });
       } catch (err) {
-        console.log(err);
       }
     };
 
     fetchData();
   }, []);
+
+  // const handleGoBack = (id) => {
+  //   history.push(`/`);
+  // };
+
   return (
     <div className="RestaurantDetail">
       {selectedRestaurant && (
         <>
+          <Link to="/restaurants">
+            <button
+              className="btn btn-primary"
+            >Go back</button>
+          </Link>
+
           <h1 className="text-center display-1">
             {selectedRestaurant.name}
           </h1>

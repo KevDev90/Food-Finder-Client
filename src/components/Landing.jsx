@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import "../css/Landing.css";
 
 const Landing = () => {
@@ -10,7 +11,7 @@ const Landing = () => {
       <p>On a mobile view you can scroll horizontally to see the full list of Restaurants!</p>
       <p>You can also Edit and Delete a Restaurant after creating it through the buttons on the Restaurant row!</p>
       <p>After creating a Restaurant you can click anywhere on that Restaurants row in the table to write a review and rate that particular Restaurant!</p>
-      <button>Start Application</button>
+      <Link to="/restaurants"><button>Start Application</button></Link>
     </div>
   );
 };

@@ -4,14 +4,16 @@ import Home from "./routes/Home";
 import UpdatePage from "./routes/UpdatePage";
 import RestaurantDetailPage from "./routes/RestaurantDetailPage";
 import { RestaurantsContextProvider } from "./context/RestaurantsContext";
+import Landing from "./components/Landing";
+import NotFound from "./components/NotFound";
 const App = () => {
   return (
     <RestaurantsContextProvider>
       <div className="container">
         <Router>
           <Switch>
-            {/* <Route exact path="/" component={Home} /> */}
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/restaurants" component={Home} />
             <Route
               exact
               path="/restaurants/:id/update"
@@ -22,6 +24,8 @@ const App = () => {
               path="/restaurants/:id"
               component={RestaurantDetailPage}
             />
+            <Route path="*" component={NotFound} />
+
           </Switch>
         </Router>
       </div>

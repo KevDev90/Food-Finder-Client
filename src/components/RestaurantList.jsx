@@ -29,7 +29,6 @@ const RestaurantList = (props) => {
         })
       );
     } catch (err) {
-      console.log(err);
     }
   };
 
