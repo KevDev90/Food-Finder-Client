@@ -21,9 +21,11 @@ Bon Appetit!
 
 ## Screenshots
 ### Landing Page 
-<img src="./src/images/FoodFinder-Landing.png" alt="Food Finder Landing Page" width="450" >
+<img src="./src/images/FoodFinder-Landing.png" alt="Food Finder Landing Page" width="450">
+
 ### Main Restaurant Table
 <img src="./src/images/FoodFinder-Main.png" alt="Food Finder Main Table" width="450" >
+
 ### Add a Review
 <img src="./src/images/FoodFinder-Reviews.png" alt="Food Finder Reviews Page" width="450" >
 
