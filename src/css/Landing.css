@@ -1,0 +1,65 @@
+.landing-container .hero {
+    min-height: 100vh;
+    background: url(../images/wynn.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.landing-container .wrapper {
+    min-height: 100vh;
+    background: #000000a6;
+}
+
+.landing-container p {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 3%;
+}
+
+.landing-container header h1 {
+    color: #fff;
+    font-size: 2.3rem;
+    text-align: center;
+    padding-top: 8rem;
+}
+
+.landing-container article {
+    width: 80%;
+    margin: 5rem auto;
+}
+.landing-container .hero a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+.landing-container a button {
+    padding: .7rem 3rem;
+    background: #027CFF;
+    border: 1px solid #027CFF;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media screen and (max-width: 650px) {
+    .landing-container header h1 {
+        padding-top: 4rem;
+    }
+    .landing-container .wrapper, .landing-container .hero {
+        height: auto;
+    }
+}
+@media screen and (max-width: 540px) {
+    .landing-container header h1 {
+        padding-top: 2rem;
+    }
+}
+@media screen and (max-width: 420px) {
+    .landing-container .wrapper, .landing-container .hero {
+        height: auto;
+    }
+    .landing-container p {
+        font-size: .9rem;
+    }
+}

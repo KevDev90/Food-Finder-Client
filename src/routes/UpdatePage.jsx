@@ -1,6 +1,6 @@
 import React from "react";
 import UpdateRestaurant from "../components/UpdateRestaurant";
-import "../css/UpdatePage.css";
+// import "../css/UpdatePage.css";
 import { Link } from "react-router-dom";
 
 const UpdatePage = () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import RestaurantFinder from "../apis/RestaurantFinder";
 import { RestaurantsContext } from "../context/RestaurantsContext";
 import { useHistory } from "react-router-dom";
@@ -6,7 +6,8 @@ import StarRating from "./StarRating";
 import "../css/RestaurantList.css";
 
 const RestaurantList = (props) => {
-  const { restaurants, setRestaurants } = useContext(RestaurantsContext);
+  const [resReviews, setResReviews] = useState({})
+  const { restaurants, setRestaurants , selectedRestaurant} = useContext(RestaurantsContext);
   let history = useHistory();
   useEffect(() => {
     const fetchData = async () => {
@@ -15,9 +16,23 @@ const RestaurantList = (props) => {
         setRestaurants(response.data.data);
       } catch (err) {}
     };
-
+// [5, 0]
     fetchData();
   }, []);
+
+  useEffect(() => {
+    const fetchData = () => {
+      restaurants.map(async item => {
+        const response = await RestaurantFinder.get(`/${item.id}`);
+        const totalReviewsGiven = response.data.data.reviews.map(({ rating }) => rating).reduce((acc, currentItem) => acc + currentItem, 0);
+        const average_rating = totalReviewsGiven / response.data.data.reviews.length;
+  
+        setResReviews((props) => ({...props, [item.id]: average_rating}))
+        console.log(average_rating, "iiii")
+      })
+    }
+    fetchData()
+  }, [restaurants])
 
   const handleDelete = async (e, id) => {
     e.stopPropagation();
@@ -42,6 +57,7 @@ const RestaurantList = (props) => {
   };
 
   const renderRating = (restaurant) => {
+    console.log('======>res-count', restaurant )
     if (!restaurant.count) {
       return <span className="text-warning">0 reviews</span>;
     }
@@ -60,7 +76,7 @@ const RestaurantList = (props) => {
       <th scope="col">Restaurant</th>
             <th scope="col">Location</th>
             <th scope="col">Price Range</th>
-            <th scope="col">Ratings</th>
+            <th scope="col">Avg Rating</th>
             <th scope="col">Edit</th>
              <th scope="col">Delete</th>
       </tr>
@@ -76,7 +92,8 @@ const RestaurantList = (props) => {
                    <td>{restaurant.name}</td>
                    <td>{restaurant.location}</td>
                    <td>{"$".repeat(restaurant.price_range)}</td>
-                   <td>{renderRating(restaurant)}</td>
+                   {/* <td>{renderRating(restaurant)}</td> */}
+                   <td>{!resReviews[restaurant.id] ? 0 : resReviews[restaurant.id]}</td>
                    <td>
                      <button
                        onClick={(e) => handleUpdate(e, restaurant.id)}

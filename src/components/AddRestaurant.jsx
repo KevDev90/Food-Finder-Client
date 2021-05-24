@@ -31,7 +31,7 @@ const AddRestaurant = () => {
               onChange={(e) => setName(e.target.value)}
               type="text"
               className="input"
-              placeholder="name"
+              placeholder=" Restaurant name"
             />
           </div>
           <div className="location">

@@ -21,6 +21,7 @@ const RestaurantDetailPage = () => {
         const average_rating = totalReviewsGiven / response.data.data.reviews.length;
 
         setSelectedRestaurant({ ...response.data.data, average_rating });
+        console.log(response, "response")
       } catch (err) {
       }
     };

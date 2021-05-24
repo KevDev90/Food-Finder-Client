@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { RestaurantsContext } from "../context/RestaurantsContext";
 import RestaurantFinder from "../apis/RestaurantFinder";
+import "../css/UpdateRestaurant.css";
 
 const UpdateRestaurant = (props) => {
   const { id } = useParams();
@@ -33,7 +34,7 @@ const UpdateRestaurant = (props) => {
   };
 
   return (
-    <div>
+    <div className="UpdateRes">
       <form action="">
         <div className="form-group">
           <label htmlFor="name">Name</label>
