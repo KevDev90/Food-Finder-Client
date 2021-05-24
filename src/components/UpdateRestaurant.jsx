@@ -30,7 +30,7 @@ const UpdateRestaurant = (props) => {
       location,
       price_range: priceRange,
     });
-    history.push("/");
+    history.push("/restaurants");
   };
 
   return (
