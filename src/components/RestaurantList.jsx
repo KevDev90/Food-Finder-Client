@@ -28,7 +28,6 @@ const RestaurantList = (props) => {
         const average_rating = totalReviewsGiven / response.data.data.reviews.length;
 
         setResReviews((props) => ({ ...props, [item.id]: average_rating }))
-        console.log(average_rating, "iiii")
       })
     }
     fetchData()
