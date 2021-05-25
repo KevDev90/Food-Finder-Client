@@ -1,6 +1,8 @@
 import React from "react";
 import "../css/StarRating.css";
 
+//Component for determining how many Stars are depicted with CSS on reviews page
+
 const StarRating = ({ rating }) => {
   //rating =4
   const stars = [];

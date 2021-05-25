@@ -5,6 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import '../src/index.css';
 import { usePromiseTracker } from "react-promise-tracker";
 import ResGif from "./restaurantGif.gif"
+
+// Adds a loading indicator for fetch requests and renders the app the DOM
 const LoadingIndicator = props => {
     const { promiseInProgress } = usePromiseTracker();
  

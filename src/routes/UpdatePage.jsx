@@ -3,6 +3,8 @@ import UpdateRestaurant from "../components/UpdateRestaurant";
 // import "../css/UpdatePage.css";
 import { Link } from "react-router-dom";
 
+//Route for updating a restaurant
+
 const UpdatePage = () => {
   return (
     <div>

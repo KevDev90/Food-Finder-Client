@@ -3,6 +3,8 @@ import RestaurantFinder from "../apis/RestaurantFinder";
 import { RestaurantsContext } from "../context/RestaurantsContext";
 import "../css/AddRestaurant.css";
 
+//Component for Adding a Restaurant
+
 const AddRestaurant = () => {
   const { addRestaurants } = useContext(RestaurantsContext);
   const [name, setName] = useState("");

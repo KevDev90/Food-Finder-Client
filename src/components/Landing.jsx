@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import "../css/Landing.css";
-import resImage from "../images/wynn.jpeg"
+
+//Landing Page component
 
 const Landing = () => {
   return (

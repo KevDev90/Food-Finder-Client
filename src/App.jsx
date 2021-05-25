@@ -6,6 +6,9 @@ import RestaurantDetailPage from "./routes/RestaurantDetailPage";
 import { RestaurantsContextProvider } from "./context/RestaurantsContext";
 import Landing from "./components/Landing";
 import NotFound from "./components/NotFound";
+
+//App renders certain components conditionally based on url filepath
+
 const App = () => {
   return (
     <RestaurantsContextProvider>

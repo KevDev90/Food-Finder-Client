@@ -7,6 +7,8 @@ import Reviews from "../components/Reviews";
 import AddReview from "../components/AddReview";
 import "../css/RestaurantDetailPage.css";
 
+//Route for showing a restaurants reviews and star ratings
+
 const RestaurantDetailPage = () => {
   const { id } = useParams();
   const { selectedRestaurant, setSelectedRestaurant } = useContext(

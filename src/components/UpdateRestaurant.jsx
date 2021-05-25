@@ -4,6 +4,8 @@ import { RestaurantsContext } from "../context/RestaurantsContext";
 import RestaurantFinder from "../apis/RestaurantFinder";
 import "../css/UpdateRestaurant.css";
 
+//Component for Updating an existing restaurant
+
 const UpdateRestaurant = (props) => {
   const { id } = useParams();
   let history = useHistory();

@@ -2,6 +2,8 @@ import React from "react";
 import StarRating from "./StarRating";
 import "../css/Reviews.css";
 
+//Component for adding reviews for a specific restaurant
+
 const Reviews = ({ reviews }) => {
   return (
     <div className="review-grid">

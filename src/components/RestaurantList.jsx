@@ -5,6 +5,8 @@ import { useHistory } from "react-router-dom";
 import "../css/RestaurantList.css";
 import { trackPromise } from 'react-promise-tracker';
 
+//Component of the main table of Restaurants
+
 const RestaurantList = (props) => {
   const [resReviews, setResReviews] = useState({})
   const { restaurants, setRestaurants, selectedRestaurant } = useContext(RestaurantsContext);
@@ -16,7 +18,6 @@ const RestaurantList = (props) => {
         setRestaurants(response.data.data);
       } catch (err) { }
     };
-    // [5, 0]
     trackPromise(fetchData());
   }, []);
 

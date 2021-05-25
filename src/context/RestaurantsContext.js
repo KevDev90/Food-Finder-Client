@@ -1,5 +1,7 @@
 import React, { useState, createContext } from "react";
 
+//Creates context for the rest of the application to reference
+
 export const RestaurantsContext = createContext();
 
 export const RestaurantsContextProvider = (props) => {

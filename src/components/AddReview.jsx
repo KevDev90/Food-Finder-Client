@@ -3,6 +3,8 @@ import RestaurantFinder from "../apis/RestaurantFinder";
 import { useLocation, useParams, useHistory } from "react-router-dom";
 import "../css/AddReview.css";
 
+//Component for adding a review to a restaurant
+
 const AddReview = () => {
   const { id } = useParams();
   const location = useLocation();
